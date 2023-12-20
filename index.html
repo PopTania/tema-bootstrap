@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="author" content="Tania Pop">
+    <meta name=" keywords" cotent="companie IT, tehnologie , servicii IT ">
+    <meta name="description"
+        content=" Companie IT inovatoare și dinamică, axată pe soluții tehnologice de vârf, care creează experiențe digitale remarcabile pentru clienții săi.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>District8</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<style>
+    /*navbar*/
+    .main-navbar {
+        background-color: rgb(33, 33, 33);
+    }
+
+    .main-navbar .navbar-brand a {
+        font-family: Tektur;
+        font-size: 30pt;
+        font-weight: bold;
+    }
+
+    .main-navbar .navbar-brand img {
+        vertical-align: bottom;
+        margin: 0;
+    }
+
+    .main-navbar .nav-link {
+        color: rgb(136, 164, 195);
+        vertical-align: bottom;
+        font-family: Tektur;
+        font-size: 16pt;
+
+    }
+
+    .main-navbar .nav-link:hover {
+        background-color: rgb(136, 164, 195);
+        color: black;
+        font-family: Tektur;
+        font-weight: bold;
+    }
+
+    .dropdown-menu {
+        background-color: rgb(33, 33, 33);
+    }
+
+    .dropdown-item {
+        color: rgb(136, 164, 195);
+        font-family: Tektur;
+    }
+
+    .dropdown-item:hover {
+        background-color: rgb(136, 164, 195);
+        color: rgb(33, 33, 33);
+    }
+
+    /*scrollspy*/
+    .scrollspy-container {
+        overflow-y: scroll;
+        height: 18em;
+    }
+
+    .scrollspy-container h3 {
+        font-family: Tektur;
+        color: rgb(58, 107, 159);
+    }
+
+    .list-group-item {
+        font-family: Tektur;
+    }
+
+    .list-group-item.active {
+        background-color: rgb(136, 164, 195);
+        border-color: rgb(136, 164, 195);
+        color: rgb(33, 33, 33)
+    }
+
+    .placeholder {
+        color: rgb(136, 164, 195);
+    }
+
+    /*carusel*/
+    .carousel-caption {
+        background-color: rgba(33, 33, 33, 0.888);
+    }
+
+    .carousel-item h2 {
+        font-family: Tektur;
+        font-size: 18pt;
+        font-style: bold;
+    }
+
+    .carousel-item p {
+        font-family: Tektur;
+        font-size: 12pt;
+    }
+
+
+    /*carduri*/
+    .card-title {
+        font-family: Tektur;
+        font-size: 18pt;
+        color: rgb(58, 107, 159)
+    }
+
+    .container h2 {
+        font-family: Tektur;
+        font-size: 35pt;
+        padding: 10%;
+        color: rgb(33, 33, 33);
+        text-align: center;
+        font-style: bold;
+    }
+
+    /*proiecte anterioare*/
+    .container h3 {
+        font-family: Tektur;
+        color: rgb(33, 33, 33);
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: rgb(136, 164, 195);
+        color: rgb(33, 33, 33);
+    }
+
+    /*footer*/
+    .bg-negru {
+        background-color: rgb(33, 33, 33);
+    }
+
+    .bg-alb {
+        background-color: white;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+        <div class="container-xxl m-0">
+            <h1 class="navbar-brand">
+                <a class="nav-link" href="index.html">
+                    <img src="letter-d.png" />District8
+                </a>
+            </h1>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                <ul class="nav main-menu flex-column flex-md-row">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Despre noi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#info_general">Informații generale</a></li>
+                            <li><a class="dropdown-item" href="#echipa_noastra">Echipa noastră</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#servicii">Servicii</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proiecte_anterioare">Proiecte anterioare</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--slider//5 img-->
+    <header>
+        <div id="descriere-carusel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#descriere-carusel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#descriere-carusel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#descriere-carusel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#descriere-carusel" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#descriere-carusel" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="slider-office1.jpg" class="d-block w-100"
+                        alt="angajați de la o firmă de IT care lucrează">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Spațiul nostru de lucru</h2>
+                        <p>Prin designul modern oferim angajaților noștri un mediu în care să poată să-și atingă
+                            potențialul maxim.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="slider-office2.jpg" class="d-block w-100"
+                        alt="angajați de la o firmă de IT care arată spre cameră fericiți">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Teambuilding</h2>
+                        <p>Organizăm teambuilding-uri pentru angajați în urma cărora vor putea colabora mai eficient la
+                            următoarele proiecte. </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="slider-office3.jpg" class="d-block w-100"
+                        alt="laptopuri si gadgeturi pe o masă de lemn și niște oameni care bat pumnul">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Muncă în echipă</h2>
+                        <p>Ne ocupăm mereu de bunăstarea angajaților și de calitatea muncii lor colaborative.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="slider-office4.jpg" class="d-block w-100" alt="o mână care prinde niște foi pe un panou">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Planificare</h2>
+                        <p>Ne asigurăm ca fiecare serviciu să fie oferit clientului cât mai repede cu putință.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="slider-office5.jpg" class="d-block w-100"
+                        alt="un bărbat care tastează ceva pe telefon și pe masă are mai multe lucururi folositoare la job">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Prezența pe social media</h2>
+                        <p>Fiind o companie de IT în continuă dezvoltare,suntem activi și pe rețelele de social media.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#descriere-carusel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#descriere-carusel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <!--informatii generale-->
+    <div id="info_general" class="container">
+        <h2 class="text-center">Informații generale</h2>
+        <div class="row">
+            <div class="mb-4 col-sm-12 col-md-4 col-lg-6">
+                <div id="acordeon-info" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#list-item-1">Despre noi</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">Declarație de la CEO</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-3">Program de lucru</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">Certificări</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-5">Recunoașteri</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-6">Noutăți</a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-7">Evenimente</a>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-6">
+                <div class="scrollspy-container" data-bs-spy="scroll" data-bs-target="#navId"
+                    data-bs-smooth-scroll="true" class="scrollspy-descrieri" tabindex="0">
+                    <h3 id="list-item-1">Despre noi</h3>
+                    <p>District8 este o firmă de tehnologie cu sediul în Cluj-Napoca, specializată în dezvoltarea
+                        soluțiilor digitale de vârf pentru clienții din întreaga lume. Cu o experiență vastă în
+                        domenii precum dezvoltarea software, consultanța IT și securitatea cibernetică, suntem
+                        pasionați de transformarea digitală și de oferirea de inovații tehnologice care să sprijine
+                        creșterea și succesul afacerilor. District8 își desfășoară activitatea cu pasiune și
+                        angajament pentru excelență în fiecare aspect al serviciilor sale.
+                        La District8, misiunea noastră este să construim soluții tehnologice de vârf care să
+                        transforme și să îmbunătățească experiența utilizatorilor și să răspundă provocărilor
+                        complexe ale lumii digitale. Ne angajăm să aducem inovație, eficiență și valoare în fiecare
+                        proiect pe care îl abordăm. Echipa District8 este alcătuită din profesioniști cu o gamă
+                        diversă de abilități și expertiză. Ingineri software talentați, designeri creativi și
+                        specialiști în securitate cibernetică lucrează împreună pentru a oferi soluții complete și
+                        personalizate. Suntem mândri că promovăm diversitatea și căutăm întotdeauna să aducem
+                        talente noi în echipa noastră.</p>
+                    <h3 id="list-item-2">Declarație de la CEO</h3>
+                    <p>La inima “District 8” pulsează pasiunea pentru inovație și excelență. Ne angajăm să aducem
+                        schimbări semnificative în lumea tehnologică, creând soluții care depășesc așteptările și
+                        inspiră transformarea. Echipa noastră dedicată și talentată este forța motrice din spatele
+                        succesului nostru, iar viziunea noastră este să redefinim viitorul prin tehnologie. Suntem
+                        mai mult decât o firmă IT; suntem arhitecții viitorului digital.</p>
+                    <h3 id="list-item-3">Program de lucru</h3>
+                    <ul>
+                        <li>Programul normal: (luni-joi): 9:00-18:00</li>
+                        <li>În ziua de vineri programul este redus la orele: 9:00-16:00.</li>
+                        <li>Pauza de prânz este între 1:00 PM și 2:00 PM în fiecare zi lucrătoare.</li>
+                    </ul>
+                    <p>*Programul redus vineri după-amiază este utilizat pentru activități de dezvoltare personală,
+                        training-uri interne sau activități de echipă.
+                    </p>
+                    <h3 id="list-item-4">Certificări</h3>
+                    <p>Certificat de Inovație Tehnologică Avansată (CITA)
+                        Atestă expertiza companiei în dezvoltarea și implementarea tehnologiilor de vârf.
+
+                        Certificat de Securitate Cibernetică Excepțională (CSCE)
+                        Confirmă standardele ridicate ale firmei în asigurarea securității sistemelor și datelor.
+
+                        Certificare de Performanță în Eficiența Energetică (CPEE)
+                        Pentru angajamentul companiei în dezvoltarea de soluții IT prietenoase cu mediul și
+                        eficiente
+                        energetic.
+                    </p>
+                    <h3 id="list-item-5">Recunoașteri</h3>
+                    <p>Premiul pentru Inovație Tehnologică Și Design (IT&D Excellence
+                        Award)
+                        Obținut pentru excelența în inovație și design în domeniul IT.
+
+                        Distincția pentru Excelență în Serviciile Cloud (Cloud Service Excellence Distinction)
+                        Recunoaștere pentru serviciile cloud remarcabile oferite de firmă.
+
+                        Mențiune de Onoare pentru Contribuții Semnificative la Comunitate (Community Impact Honor)
+                        Pentru implicarea activă a firmei în proiecte și activități cu impact pozitiv în comunitate.
+                    </p>
+                    <h3 id="list-item-6">Noutăți</h3>
+                    <p>Lansarea Revoluționară a Platformei QuantumTech:
+                        Firma IT District8 anunță lansarea platformei QuantumTech, o soluție inovatoare de calcul
+                        cuantic
+                        care promite să revoluționeze industria IT.
+
+                        Parteneriat Strategic cu Gigantul din Silicon Valley:
+                        District8 a semnat un parteneriat strategic cu unul dintre cei mai mari jucători din Silicon
+                        Valley
+                        pentru dezvoltarea unei noi generații de tehnologii inteligente.
+
+                        Inaugurarea Laboratorului de Inovare și Cercetare:
+                        Firma deschide un laborator de ultimă generație dedicat inovației și cercetării în domeniul
+                        inteligenței artificiale, pentru a rămâne în fruntea evoluției tehnologice.
+                    </p>
+                    <h3 id="list-item-7">Evenimente</h3>
+                    <p>Webinar Internațional: Viitorul Tehnologiei Blockchain:
+                        District8 organizează un webinar global cu experți de top în tehnologia blockchain,
+                        explorând
+                        perspectivele viitoare ale acestei tehnologii revoluționare.
+
+                        Participare la Conferința Tehnologică Globală 2023:
+                        Echipa District8 va fi prezentă la Conferința Tehnologică Globală pentru a împărtăși
+                        cunoștințele și
+                        inovațiile companiei cu comunitatea globală a tehnologiei.
+
+                        Hackathon pentru Tinerii Talentați:
+                        District8 lansează un hackathon dedicat tinerilor pasionați de tehnologie, oferindu-le
+                        oportunitatea
+                        de a-și demonstra abilitățile și de a interacționa cu profesioniști din industrie.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--placeholder-->
+    <div class="container" aria-hidden="true">
+        <span class="placeholder col-12 mt-5 placeholder-xs"></span>
+    </div>
+    <!--echipa noastra-->
+    <div id="echipa_noastra" class="container">
+        <h2>Echipa noastră</h2>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6">
+            <div class="col mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="herman-ilkos.jpg" class="card-img-top" alt="barbat cu ochelari îmbrăcat în costum">
+                        <h3 class="card-title">Herman Ilkos</h3>
+                        <p class="card-text">CEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="alina-amachi.jpg" class="card-img-top"
+                            alt="femeie cu păr lung care zâmbește la cameră">
+                        <h3 class="card-title">Alina Amachi</h3>
+                        <p class="card-text">Game Designer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="alfredo-gusta.jpg" class="card-img-top" alt="un bărbat încruntat la costum">
+                        <h3 class="card-title">Alfredo Gusta</h3>
+                        <p class="card-text">Product Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="andrada-hurda.jpg" class="card-img-top"
+                            alt="o femeie blondă care are un dosar portocaliu în mână și zâmbește la cameră">
+                        <h3 class="card-title">Andrada Hurda</h3>
+                        <p class="card-text">Project Manager</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="mirela-justa.jpg" class="card-img-top"
+                            alt="o femeie îmbrăcată la costum care se sprijină de un birou">
+
+                        <h3 class="card-title">Mirela Justa</h3>
+                        <p class="card-text">Back End Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="ionel-aureluc.jpg" class="card-img-top"
+                            alt="un bărbat tânăr îmbrăcat într-o cămașă albastru deschis">
+
+                        <h3 class="card-title">Ionel Aureluc</h3>
+                        <p class="card-text">Data Scientist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--servicii-->
+    <div id="servicii" class="container ">
+        <h2>Serviciile pe care le oferim</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+            <div class="col mb-3">
+                <div class="card h-100 shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="card-body">
+                        <h3 class="card-title"> Dezvoltare de Software <span class="badge bg-secondary"> De succes</span>
+                        </h3>
+                        <p class="card-text">Creare de aplicații web și mobile personalizate. Dezvoltare de software
+                            enterprise. Creare și implementare de soluții software la cheie.</p>
+                    </div>
+                    <img src="laptop-code.jpg" class="card-img-top" alt="laptop pe care a fost scris cod">
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card h-100 shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="card-body">
+                        <h3 class="card-title"> Consultanță IT <span class="badge bg-secondary">Indisponibil</span></h3>
+                        <p class="card-text">Consultanță în strategii de IT și transformare digitală. Evaluare și
+                            optimizare a infrastructurii IT.</p>
+                    </div>
+                    <img src="laptop-code2.jpg" class="card-img-top"
+                        alt="mai multe linii de cod scrise pe un ecran de laptop">
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card h-100 shadow p-3 mb-5 bg-body-tertiary rounded">
+
+                    <div class="card-body">
+                        <h3 class="card-title"> Securitate Cibernetică <span class="badge bg-secondary">Nou</span></h3>
+                        <p class="card-text">Evaluare a vulnerabilităților și testare de securitate. Implementare de
+                            soluții de securitate și monitorizare.</p>
+                    </div>
+                    <img src="security.jpg" class="card-img-top"
+                        alt="cuvântul securitate scris cu albastru pe un ecran">
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="card h-100 shadow p-3 mb-5 bg-body-tertiary rounded">
+
+                    <div class="card-body">
+                        <h3 class="card-title"> Servicii Cloud <span class="badge bg-secondary">Folositor</span></h3>
+                        <p class="card-text">Migrație către servicii cloud. Administrare și optimizare a infrastructurii
+                            cloud.</p>
+                    </div>
+                    <img src="personaj-desenat-calculator.png" class="card-img-top"
+                        alt="un personaj pe un fundal galben care scrie la laptop">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--acordeon cu proiecte anterioare-->
+    <div id="proiecte_anterioare" class="container">
+        <h2>Proiecte anterioare</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <img class="w-100 rounded mt-4 mb-4 mt-lg-0" src="foundry.jpg"
+                    alt="tabletă deschisă cu textul Foundry" />
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                Foundry
+                            </button>
+                        </h3>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p>Website-ul adaptat pentru telefon redefinește experiența de navigare online, oferind
+                                    o
+                                    interfață intuitivă și prietenoasă cu utilizatorul pe dispozitivele mobile. Designul
+                                    său
+                                    responsiv se adaptează perfect la diferite dimensiuni de ecrane, asigurând o
+                                    vizualizare
+                                    optimă indiferent de dispozitivul folosit. Meniurile simplificate și butoanele de
+                                    acțiune
+                                    bine plasate facilitează navigarea și interacțiunea, în timp ce conținutul se
+                                    livrează
+                                    în
+                                    mod eficient pentru a asigura viteze de încărcare rapide. Funcționalitățile tactile,
+                                    precum
+                                    derularea fluentă și gesturile intuitive, completează experiența de utilizare
+                                    mobilă.
+                                    Site-ul este astfel conceput pentru a satisface nevoile utilizatorilor în mișcare,
+                                    oferindu-le acces rapid și convenabil la informații, servicii sau produse,
+                                    indiferent de
+                                    locație sau dispozitivul pe care-l folosesc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                Smartphone
+                            </button>
+                        </h3>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Noul smartphone inovator redefinește experiența utilizatorilor prin tehnologii
+                                    avansate
+                                    și
+                                    designul său revoluționar. Cu un ecran OLED de ultimă generație, acest dispozitiv
+                                    oferă
+                                    imagini clare și culori vibrante, creând o vizualizare captivantă a conținutului.
+                                    Performanța este susținută de un procesor de vârf și o memorie generoasă, asigurând
+                                    o
+                                    experiență de utilizare rapidă și fără probleme. Sistemul său de camere inovator
+                                    oferă
+                                    capturi impresionante, iar funcționalitățile software aduc o interfață intuitivă și
+                                    personalizabilă. Cu conectivitate 5G, baterie de lungă durată și funcții de
+                                    securitate
+                                    avansate, acest smartphone se situează la vârful inovației, oferind o soluție mobilă
+                                    completă pentru nevoile moderne.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <img class="w-100 rounded mb-4 mt-4 mt-lg-0" src="smartphone.jpg"
+                    alt="smartphone deschis cu o imagine cu o femeie blondă" />
+            </div>
+        </div>
+    </div>
+    <!--placeholder-->
+    <div aria-hidden="true" class="container">
+        <span class="placeholder col-12 mt-5 mb-5 placeholder-xs"></span>
+    </div>
+    <!--partea 2 din acordeon-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <img class="w-100 rounded mt-4 mb-4 mt-lg-0" src="tableta.png"
+                    alt="tabletă deschisă pe care sunt afișate mai multe imagini" />
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="accordion " id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                Tabletă
+                            </button>
+                        </h3>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <p>District8, o inovațioare companie IT, a lansat recent o tabletă revoluționară,
+                                    redefinind standardele în industria tehnologică. Denumită „NexTab”, această tabletă
+                                    impresionează prin design-ul său elegant și performanțele tehnologice de ultimă
+                                    generație. Echipată cu un ecran de rezoluție excepțională, NexTab oferă
+                                    utilizatorilor o experiență vizuală captivantă și claritate remarcabilă. Procesorul
+                                    puternic, dezvoltat intern de către District8, asigură o performanță rapidă și
+                                    eficientă, facilitând multitasking-ul fără efort. Cu o baterie de lungă durată și o
+                                    gamă variată de caracteristici inteligente, precum recunoașterea facială avansată și
+                                    tehnologia de realitate augmentată integrată, NexTab promite să redefinească modul
+                                    în care utilizatorii interacționează cu tehnologia mobilă.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                Smartwatch
+                            </button>
+                        </h3>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>District8, o firmă de IT axată pe inovație, a lansat recent un smartwatch captivant,
+                                    adus la viață prin tehnologii avansate și design sofisticat. Denumit „TechWear Pro”,
+                                    acest smartwatch integrează funcții inteligente care îmbunătățesc semnificativ viața
+                                    utilizatorilor. Cu un ecran tactil vibrant și rezistent, TechWear Pro oferă o
+                                    interfață intuitivă și personalizabilă pentru acces rapid la notificări, apeluri și
+                                    monitorizarea activităților fizice. Senzorii de ultimă generație îmbunătățesc
+                                    măsurătorile de sănătate, oferind date precise despre ritmul cardiac, caloriile arse
+                                    și calitatea somnului. Cu o durată de viață a bateriei remarcabilă, TechWear Pro
+                                    este partenerul perfect pentru cei activi, asigurându-se că sunt conectați și
+                                    informați în orice moment. District8 demonstrează încă o dată angajamentul său față
+                                    de inovație și calitate prin lansarea acestui smartwatch care îmbină eleganța cu
+                                    tehnologia de vârf.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <img class="w-100 rounded mt-4 mb-4 mt-lg-0" src="smartwatch.png"
+                    alt="smartwatch deschis care arată ceasul" />
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer id="contact" class="bg-negru text-light pb-0 mt-5">
+        <div class="container">
+            <h2 class="text-light">Contact</h2>
+        </div>
+        <div class="container">
+            <div class="container border border-light p-4">
+                <ul class="list-unstyled text-center">
+                    <li>District8 IT Solutions</li>
+                    <li>Adresa: Strada Alexandru Vaida Voevod nr.55</li>
+                    <li>Telefon: 0356289180</li>
+                    <li> E-mail: district8@yahoo.com</li>
+                    <li> Website: www.district8it.com</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center"> Conectează-te cu noi pe rețelele sociale:</p>
+        <div class="container bg-alb d-flex justify-content-center justify-content-between p-2">
+            <a target="_blank" href="https://www.instagram.com/"><img src="instagram.png" alt="logo instagram"></a>
+            <a target="_blank" href="https://www.tiktok.com/"><img src="tiktok.png" alt="logo tiktok"></a>
+            <a target="_blank" href="https://twitter.com/"><img src="twitter.png" alt="logo twitter"></a>
+            <a target="_blank" href="https://www.facebook.com/"><img src="facebook.png" alt="logo facebook"></a>
+        </div>
+        <p class="mb-0 pb-3 text-center">© 2023 District8 IT Solutions. Toate drepturile rezervate.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
